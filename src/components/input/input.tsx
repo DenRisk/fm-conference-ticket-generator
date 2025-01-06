@@ -35,7 +35,7 @@ function Input({type, id, name, label, placeholder, register, errors}: InputProp
                 errors?.[name] && (
                     <div className='flex items-center gap-x-1 text-primary-500'>
                         <Icon id='info' pointer={false}/>
-                        <p className='text-custom-7 text-sm'>{String(errors[name]?.message)}</p>
+                        <p className='text-custom-7 text-sm' role="alert" aria-live="assertive">{String(errors[name]?.message)}</p>
                     </div>
                 )
             }

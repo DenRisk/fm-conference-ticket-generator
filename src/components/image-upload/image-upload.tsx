@@ -122,7 +122,7 @@ const ImageUpload = ({ register, setError, setValue, errors, clearErrors}: Image
                 errors?.upload && (
                     <div className="flex items-center gap-x-1 text-primary-500">
                         <Icon id="info" pointer={false}/>
-                        <p className="text-custom-7 text-sm">{String(errors.upload.message)}</p>
+                        <p className="text-custom-7 text-sm" role="alert" aria-live="assertive">{String(errors.upload.message)}</p>
                     </div>
                 )
             }
